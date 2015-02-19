@@ -7,9 +7,9 @@ foodieApp.config(['$routeProvider', function($routeProvider){
         templateUrl: "view1/view1.html",
         controller: "HomeController"
     });
-    $routeProvider.when("/turkey",{
+    $routeProvider.when("/list",{
         templateUrl: "view2/view2.html",
-        controller: "View2Controller"
+        controller: "HomeController"
     });
     $routeProvider.otherwise({
         redirectTo: "/home"
