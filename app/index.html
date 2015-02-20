@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
     <link rel ="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel ="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel ="stylesheet" href="bower_components/semantic-ui/dist/semantic.min.css">
   <!--<link rel="stylesheet" href="app.css">-->
     <!--<link rel="stylesheet" href="style.css">-->
 
@@ -21,7 +22,7 @@
 
 
 </head>
-<body ng-app="foodieApp">
+<body ng-app="foodieApp" ng-controller="HomeController">
 <section id="container">
     <!-- **********************************************************************************************************************************************************
     TOP BAR CONTENT & NOTIFICATIONS
@@ -33,7 +34,7 @@
             <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
         </div>
         <!--logo start-->
-        <a href="index.html" class="logo"><b>DASH<span>IO</span></b></a>
+        <a href="#/home" class="logo"><b>SANDWICHES<span>APP</span></b></a>
         <!--logo end-->
         <div class="nav notify-row" id="top_menu">
             <!--  notification start -->
@@ -62,6 +63,8 @@
             <ul class="sidebar-menu" id="nav-accordion">
 
                 <p class="centered"><a href="profile.html"><img src="" class="img-circle" width="80"></a></p>
+                <a href="#/home" title="Grid View"><button><i class = "grid layout icon"></i></button></a>
+                <a href="#/list" title="List View"><button><i class="list layout icon"></i></button></a>
                 <h5 class="centered">What Do You Want To Eat?</h5>
 
                 <li><input class="form-control" ng-model="myFilter.name" placeholder="Search by name..."></li>
@@ -123,17 +126,18 @@
                 <div class="col-lg-3 ds">
 
                     <!-- RECENT ACTIVITIES SECTION -->
-                    <h4 class="centered mt">RECENT ACTIVITY</h4>
+                    <h4 class="centered mt">ADDED FAVORITES</h4>
                     <!-- First Activity -->
-                    <div class="desc">
+                    <div class="desc"  ng-repeat="item in sandwichList | filter: {addFavorite: 1}">
                         <div class="thumb">
-                            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+                            <span class="badge bg-theme"><img src="{{item.image}}"></span>
                         </div>
                         <div class="details">
-                            <p><muted>Just Now</muted><br>
-                                <a href="#">Paul Rudd</a> purchased an item.<br>
+                            <p><muted>You've Added</muted><br>
+                                {{item.name}} to your favorites. <br>
                             </p>
                         </div>
+                        <button><i ng-click="removeFavorite(item)" class="remove circle icon"></i></button>
                     </div>
 
 
@@ -194,10 +198,13 @@
 
   <!--FirebaseJS-->
   <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+
+    <!--Angular Fire JS-->
   <script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
   <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
 
-
+    <!--Semantic-UI JS-->
+    <script type="text/javascript" src="bower_components/semantic-ui/dist/semantic.min.js"></script>
 
   <script src="js/jquery.dcjqaccordion.2.7.js"></script>
   <script src="js/jquery.scrollTo.min.js"></script>
