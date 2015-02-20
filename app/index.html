@@ -62,7 +62,20 @@
             <ul class="sidebar-menu" id="nav-accordion">
 
                 <p class="centered"><a href="profile.html"><img src="" class="img-circle" width="80"></a></p>
-                <h5 class="centered">Sam Soffes</h5>
+                <h5 class="centered">What Do You Want To Eat?</h5>
+
+                <li><input class="form-control" ng-model="myFilter.name" placeholder="Search by name..."></li>
+                <li>
+                    <a data-ng-click="myFilter={ sandwiches: ''}">All</a>
+
+                </li>
+                <li>
+                    <a data-ng-click="myFilter={ sandwiches: 'Burger'}">Burgers</a>
+
+                </li>
+                <li>
+                    <a data-ng-click="myFilter={ sandwiches: 'Turkey'}">Turkey</a>
+                </li>
 
                 <li class="mt">
                     <a class="active" href="index.html">
@@ -83,16 +96,6 @@
                         <li><a href="font_awesome.html">Font Awesome</a></li>
                     </ul>
                 </li>
-
-                <li><input ng-model="myFilter.Type"  type="text" placeholder="Search"></li>
-                <li>
-                    <a ng-click="myFilter={ Type: 'Burger'}">Burgers</a>
-
-                </li>
-                <li>
-                    <a ng-click="myFilter={ Type: 'Turkey'}">Turkey</a>
-                </li>
-
 
             </ul>
             <!-- sidebar menu end-->

@@ -1,12 +1,7 @@
-/*
-Template Name: DASHIO - Bootstrap 3.1.1 Admin Theme
-Template Version: 1.0
-Author: Carlos Alvarez
-Website: http://Alvarez.is/
-*/
+
 
 /* Import fonts */
-@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+@import url('http://fonts.googleapis.com/css?family=Ruda:400,700,900');
 
 /* BASIC THEME CONFIGURATION */
 body {
@@ -1880,12 +1875,12 @@ label {
     transition: 0.25s ease-out;
     -webkit-backface-visibility: hidden;
 }
-.switch-square {
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
-    mask: url('../img/mask.png') 0 0 no-repeat;
-}
+/*.switch-square {*/
+    /*border-radius: 6px;*/
+    /*-webkit-border-radius: 6px;*/
+    /*-webkit-mask: url('../img/mask.png') 0 0 no-repeat;*/
+    /*mask: url('../img/mask.png') 0 0 no-repeat;*/
+/*}*/
 .switch-square > div.switch-off label {
     border-color: #7f8c9a;
     border-radius: 6px 0 0 6px;
@@ -2037,7 +2032,7 @@ ul li {
 	color: #48cfad;
 }
 
-profile-text p {
+.profile-text p {
 	margin-left: 10px;
 }
 
@@ -2258,16 +2253,16 @@ ul.my-friends li .friends-pic {
 	box-sizing: content-box;
 }
 
-.dm-icon:before {
-	speak: none;
-	line-height: 105px;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	display: block;
-	-webkit-font-smoothing: antialiased;
-}
+/*.dm-icon:before {*/
+	/*speak: none;*/
+	/*line-height: 105px;*/
+	/*font-style: normal;*/
+	/*font-weight: normal;*/
+	/*font-variant: normal;*/
+	/*text-transform: none;*/
+	/*display: block;*/
+	/*-webkit-font-smoothing: antialiased;*/
+/*}*/
 
 .dm-icon:active,
 .dm-icon:hover {

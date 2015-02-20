@@ -6,8 +6,8 @@ var foodieAppControllers = angular.module("foodieAppControllers", ["ngRoute","fi
 foodieAppControllers.controller("HomeController", ["$scope", "$firebase", "FirebaseGet", function($scope, firebase, FirebaseGet){
 
 
-    $scope.sandwiches = FirebaseGet.pullFromFirebase();
-    console.log($scope.sandwiches);
+    $scope.sandwichList = FirebaseGet.pullFromFirebase();
+    console.log($scope.sandwichList);
 
 
 }]);
