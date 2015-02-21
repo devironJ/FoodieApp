@@ -1,12 +1,11 @@
 /**
  * Created by Devon on 2/18/2015.
  */
-var foodieAppControllers = angular.module("foodieAppControllers", ["ngRoute","firebase", "foodieAppServices"]);
+var foodieAppControllers = angular.module("foodieAppControllers", ["ngRoute","firebase", "foodieAppServices","ngAnimate"]);
 
 foodieAppControllers.controller("HomeController", ["$scope", "$firebase", "FirebaseGet", function($scope, $firebase, FirebaseGet){
 
-    //uses a service to get data from Firebase
-    //$scope.sandwichList = FirebaseGet.pullFromFirebase();
+    //uses a service to get non-favorite data from Firebase
     $scope.sandwichList = FirebaseGet.pullNonFavorites();
     console.log($scope.sandwichList);
 
@@ -41,7 +40,10 @@ foodieAppControllers.controller("HomeController", ["$scope", "$firebase", "Fireb
 }]);
 
 foodieAppControllers.controller("RightSidebarController",["$scope", "$firebase", "FirebaseGet", function($scope, $firebase, FirebaseGet){
+    //uses a service to pull all data from Firebase, though is filtered by favorites in the html
     $scope.sandwichList = FirebaseGet.pullFromFirebase();
+
+    //removes from favorite list, puts back in regular list
     $scope.removeFavorite = function(item){
         var ref = new Firebase("https://sandwiches-data.firebaseio.com/" + item.$id);
         var sync = $firebase(ref);

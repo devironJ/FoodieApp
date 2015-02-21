@@ -5,17 +5,22 @@ Author: Carlos Alvarez
 Website: http://Alvarez.is/
 */
 
+
+.rightSideBar {
+    position: fixed;
+}
 /*hide animation for adding to favorites*/
 
-.hide-animation.ng-hide-add{
-    -webkit-transition:0.5s linear all;
-    transition:0.5s linear all;
-
-    /*remember to add this*/
+.fade-animation{
+    remember to add this
     display:block!important;
     opacity:1;
 }
-.hide-animation.ng-hide-add-active{
+.fade-animation {
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+}
+.fade-animation.ng-hide{
     opacity:0;
 }
 
