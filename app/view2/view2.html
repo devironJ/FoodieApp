@@ -1,6 +1,6 @@
-<div class="row">
-    <div class="col-lg-12, fade-animation" ng-init="isHidden=false" ng-hide="isHidden" ng-repeat="item in sandwichList | filter:myFilter:name | orderBy:random">
-        <div class="wellList
+<div class="row" ng-init="isHidden=false" ng-repeat="item in sandwichList | filter:myFilter:name | orderBy:random">
+    <div class="col-lg-12, fade-animation" ng-hide="isHidden" >
+        <div class="wellList">
             <div class="list-group">
                     <div class="media col-md-3">
                         <figure class="pull-left figureAdjust">
@@ -15,15 +15,7 @@
                     <div class="col-md-3 text-center">
                         <h2> 14240 <small> votes </small></h2>
                         <button type="button" class="btn btn-default btn-lg btn-block"> Vote Now! </button>
-                        <button ng-click="addFavorite(item); isHidden=true" title="Add to Favorites"><i class="plus icon"></i></button>
-                        <div class="stars">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
-                        </div>
-                        <p> Average 4.5 <small> / </small> 5 </p>
+                        <button ng-click="addFavorite(item); isHidden=true" title="Add to Favorites"><i class="plus icon"></i>Add</button>
                     </div>
             </div>
         </div>
