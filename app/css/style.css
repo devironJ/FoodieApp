@@ -5,7 +5,6 @@ Author: Carlos Alvarez
 Website: http://Alvarez.is/
 */
 
-
 .rightSideBar {
     position: fixed;
 }
@@ -29,7 +28,7 @@ Website: http://Alvarez.is/
     width: 100%
 }
 .figureAdjust{
-    height: 155px;
+    height: 160px;
     width: 300px;
 }
 
