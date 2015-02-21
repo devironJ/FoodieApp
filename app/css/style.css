@@ -5,6 +5,20 @@ Author: Carlos Alvarez
 Website: http://Alvarez.is/
 */
 
+/*hide animation for adding to favorites*/
+
+.hide-animation.ng-hide-add{
+    -webkit-transition:0.5s linear all;
+    transition:0.5s linear all;
+
+    /*remember to add this*/
+    display:block!important;
+    opacity:1;
+}
+.hide-animation.ng-hide-add-active{
+    opacity:0;
+}
+
 .imgAdjust{
     height: 100%;
     width: 100%

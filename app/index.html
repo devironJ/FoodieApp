@@ -22,7 +22,7 @@
 
 
 </head>
-<body ng-app="foodieApp" ng-controller="HomeController">
+<body ng-app="foodieApp">
 <section id="container">
     <!-- **********************************************************************************************************************************************************
     TOP BAR CONTENT & NOTIFICATIONS
@@ -57,7 +57,7 @@
     *********************************************************************************************************************************************************** -->
     <!--sidebar start-->
 
-    <aside>
+    <aside ng-controller="HomeController">
         <div id="sidebar" class="nav-collapse " tabindex="5000" style="overflow: hidden; outline: none;">
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
@@ -123,7 +123,7 @@
                 RIGHT SIDEBAR CONTENT
                 *********************************************************************************************************************************************************** -->
 
-                <div class="col-lg-3 ds">
+                <div class="col-lg-3 ds" ng-controller="RightSidebarController">
 
                     <!-- RECENT ACTIVITIES SECTION -->
                     <h4 class="centered mt">ADDED FAVORITES</h4>
@@ -195,6 +195,7 @@
   <!--AngularJS-->
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/ngAnimate/js/angular-animate.min.js"></script>
 
   <!--FirebaseJS-->
   <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>

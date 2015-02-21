@@ -14,7 +14,8 @@
     "jquery": "",
     "semantic-ui": "",
     "bootstrap" : "3.3.x",
-    "font-awesome": "4.3.x"
+    "font-awesome": "4.3.x",
+    "ngAnimate": ""
 
 
   }
