@@ -3,11 +3,11 @@
  */
 var foodieAppControllers = angular.module("foodieAppControllers", ["ngRoute","firebase", "foodieAppServices","ngAnimate"]);
 
-foodieAppControllers.controller("HomeController", ["$scope", "$firebase", "FirebaseGet", function($scope, $firebase, FirebaseGet){
+foodieAppControllers.controller("HomeController", ["$scope", "$firebase", "FirebaseGet",
+    function($scope, $firebase, FirebaseGet){
 
     //uses a service to get non-favorite data from Firebase
     $scope.sandwichList = FirebaseGet.pullNonFavorites();
-    console.log($scope.sandwichList);
 
     $scope.addFavorite = function(item){
         var ref = new Firebase("https://sandwiches-data.firebaseio.com/" + item.$id);
@@ -19,27 +19,11 @@ foodieAppControllers.controller("HomeController", ["$scope", "$firebase", "Fireb
             console.log("Error: "+ error);
         });
     };
-
-    //$scope.removeFavorite = function(item){
-    //    var ref = new Firebase("https://sandwiches-data.firebaseio.com/" + item.$id);
-    //    var sync = $firebase(ref);
-    //
-    //    sync.$update({addFavorite: 0}).then(function(ref) {
-    //        console.log("SUCCESS: "+ ref.key());    // bar
-    //    }, function(error) {
-    //        console.log("Error: "+ error);
-    //    });
-    //};
-
-    //$scope.pullFavorites = function(item){
-    //    var ref = new Firebase("https://sandwiches-data.firebaseio.com/");
-    //    ref.orderByChild("addFavorite").equalTo(1).on("value", function(snapshot){
-    //        return
-    //    })
-    //}
 }]);
 
-foodieAppControllers.controller("RightSidebarController",["$scope", "$firebase", "FirebaseGet", function($scope, $firebase, FirebaseGet){
+foodieAppControllers.controller("RightSidebarController",["$scope", "$firebase", "FirebaseGet",
+    function($scope, $firebase, FirebaseGet){
+
     //uses a service to pull all data from Firebase, though is filtered by favorites in the html
     $scope.sandwichList = FirebaseGet.pullFromFirebase();
 

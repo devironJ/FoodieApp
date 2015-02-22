@@ -19,4 +19,3 @@ foodieAppServices.factory("FirebaseGet", ["$firebase", function($firebase){
         }
     };
 }]);
-

@@ -15,8 +15,8 @@
                     </div>
                     <div class="col-md-3 text-right" style="bottom: 15px;">
                         <h2>{{item.price | currency}}</h2>
-                        <p style="font-size: 1.8em;"><small><i class="users icon"></i>:</small>&nbsp; 240 <i class="heart icon"></i></p>
-                        <p style="font-size: 1.8em;"><small><i class="child icon"></i>:</small>&nbsp; 15<i class="heart icon"></i></p>
+                        <p style="font-size: 1.8em;"><small><i class="users icon"></i>:</small>&nbsp; <b>{{item.everyoneLikes}}</b> <i class="heart icon"></i></p>
+                        <p style="font-size: 1.8em;"><small><i class="child icon"></i>:</small>&nbsp; <b>{{item.friendsLike}}</b><i class="heart icon"></i></p>
                         <button class="btn btn-default" ng-click="addFavorite(item); isHidden=true" title="Add to Favorites"><i class="plus icon"></i>Add</button>
                     </div>
             </div>
