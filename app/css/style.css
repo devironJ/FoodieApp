@@ -5,6 +5,7 @@ Author: Carlos Alvarez
 Website: http://Alvarez.is/
 */
 
+
 .rightSideBar {
     position: fixed;
 }
@@ -22,6 +23,16 @@ Website: http://Alvarez.is/
 .fade-animation.ng-hide{
     opacity:0;
 }
+
+/*.fade-animation.ng-enter{*/
+    /*-webkit-transition: 0.5s linear all;*/
+    /*transition: 0.5s linear all;*/
+    /*opacity: 0;*/
+/*}*/
+
+/*.fade-animation.ng-enter-active {*/
+    /*opacity: 1;*/
+/*}*/
 
 .imgAdjust{
     height: 100%;
