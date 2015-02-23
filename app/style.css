@@ -1,7 +1,33 @@
+/*
+Template Name: DASHIO - Bootstrap 3.1.1 Admin Theme
+Template Version: 1.0
+Author: Carlos Alvarez
+Website: http://Alvarez.is/
+*/
 
+.imgAdjust{
+    height: 100%;
+    width: 100%
+}
+.figureAdjust{
+    height: 165px;
+    width: 300px;
+}
+
+/*List View*/
+a.list-group-item {
+    height:auto;
+    min-height:220px;
+}
+a.list-group-item.active small {
+    color:#fff;
+}
+.stars {
+    margin:20px auto 1px;
+}
 
 /* Import fonts */
-@import url('http://fonts.googleapis.com/css?family=Ruda:400,700,900');
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
 
 /* BASIC THEME CONFIGURATION */
 body {
@@ -61,7 +87,7 @@ a, a:hover, a:focus {
 	background-color: #ffffff;
 	outline: none !important;
 	text-decoration: none;
-}
+}	
 
 
 
@@ -976,7 +1002,7 @@ PANELS CONFIGURATIONS
 	color: white;
 }
 .darkblue-panel footer h5 {
-	margin-left:10px;
+	margin-left:10px; 
 	margin-right: 10px;
 	font-weight: 700;
 }
@@ -1023,7 +1049,7 @@ PANELS CONFIGURATIONS
 .card {
   background: white;
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2);
-  margin-bottom: 1em;
+  margin-bottom: 1em; 
   height: 250px;
 }
 .stock .stock-chart {
@@ -1031,11 +1057,11 @@ PANELS CONFIGURATIONS
 }
 .stock .stock-chart #chart {
     height: 10.7em;
-    background: url(http://i.imgbox.com/abmuNQx2) center bottom no-repeat;
-}
+    background: url(http://i.imgbox.com/abmuNQx2) center bottom no-repeat; 
+}    
 .stock .current-price {
   background: #1d2122;
-  padding: 10px;
+  padding: 10px; 
 }
 .stock .current-price .info abbr {
     display: block;
@@ -1045,14 +1071,14 @@ PANELS CONFIGURATIONS
     margin-top: 0.18em;
 }
 .stock .current-price .changes {
-    text-align: right;
+    text-align: right; 
 }
 .stock .changes .up {
 	color: #4fd98b
 }
 .stock .current-price .changes .value {
       font-size: 1.8em;
-      font-weight: 700;
+      font-weight: 700; 
 }
 .stock .summary {
     color: #2f2f2f;
@@ -1227,6 +1253,7 @@ PANELS CONFIGURATIONS
 
 /* Instagram Panel*/
 .instagram-panel {
+	background: url(../img/instagram.jpg) no-repeat center top;
 	text-align: center;
 	background-position: center center;
 }
@@ -1237,6 +1264,7 @@ PANELS CONFIGURATIONS
 .instagram-panel p {
 	margin: 5px;
 	color: white;
+	text-align: left;
 }
 
 /* Product Panel */
@@ -1670,7 +1698,7 @@ PANELS CONFIGURATIONS
   -moz-transition: opacity 0.4s;
   -o-transition: opacity 0.4s;
   transition: opacity 0.4s;
-
+  
 }
 
 .project:hover .photo-wrapper {
@@ -1875,12 +1903,12 @@ label {
     transition: 0.25s ease-out;
     -webkit-backface-visibility: hidden;
 }
-/*.switch-square {*/
-    /*border-radius: 6px;*/
-    /*-webkit-border-radius: 6px;*/
-    /*-webkit-mask: url('../img/mask.png') 0 0 no-repeat;*/
-    /*mask: url('../img/mask.png') 0 0 no-repeat;*/
-/*}*/
+.switch-square {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -webkit-mask: url('../img/mask.png') 0 0 no-repeat;
+    mask: url('../img/mask.png') 0 0 no-repeat;
+}
 .switch-square > div.switch-off label {
     border-color: #7f8c9a;
     border-radius: 6px 0 0 6px;
@@ -2032,7 +2060,7 @@ ul li {
 	color: #48cfad;
 }
 
-.profile-text p {
+profile-text p {
 	margin-left: 10px;
 }
 
@@ -2186,7 +2214,7 @@ ul.my-friends li .friends-pic {
 	font-size: 2.4em;
 	line-height: 100px;
 	color: #fff;
-	background-color:#4ECDC4;
+	background-color:#4ECDC4;	
 		-webkit-transition: all 0.6s ease-in-out;
 		transition: all 0.6s ease-in-out;
 }
@@ -2214,7 +2242,7 @@ ul.my-friends li .friends-pic {
 
 
 /* FAQ CONF */
-.dmbox {
+.dmbox {  
 	margin: 0;
 	border: 0;
 	border: 1px solid #EDEDED;
@@ -2253,16 +2281,16 @@ ul.my-friends li .friends-pic {
 	box-sizing: content-box;
 }
 
-/*.dm-icon:before {*/
-	/*speak: none;*/
-	/*line-height: 105px;*/
-	/*font-style: normal;*/
-	/*font-weight: normal;*/
-	/*font-variant: normal;*/
-	/*text-transform: none;*/
-	/*display: block;*/
-	/*-webkit-font-smoothing: antialiased;*/
-/*}*/
+.dm-icon:before {
+	speak: none;
+	line-height: 105px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+}
 
 .dm-icon:active,
 .dm-icon:hover {

@@ -9,8 +9,7 @@ foodieAppServices.factory("FirebaseGet", ["$firebase", function($firebase){
             var ref = new Firebase("https://sandwiches-data.firebaseio.com/");
             var sync = $firebase(ref);
             var sandwiches = sync.$asArray();
-            return sandwiches
+            return sandwiches;
         }
     };
 }]);
-

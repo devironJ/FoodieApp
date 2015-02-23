@@ -1264,6 +1264,8 @@ PANELS CONFIGURATIONS
 .instagram-panel p {
 	margin: 5px;
 	color: white;
+	font-weight: 700;
+	opacity: 1;
 }
 
 /* Product Panel */
