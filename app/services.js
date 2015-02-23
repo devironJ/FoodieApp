@@ -10,7 +10,12 @@ foodieAppServices.factory("FirebaseGet", ["$firebase", function($firebase){
             var sync = $firebase(ref);
             var sandwiches = sync.$asArray();
             return sandwiches
+        },
+        pullNonFavorites: function(){
+            var ref = new Firebase("https://sandwiches-data.firebaseio.com/");
+            var sync = $firebase(ref.orderByChild("addFavorite").equalTo(0));
+            var nonFavoriteSandwiches = sync.$asArray();
+            return nonFavoriteSandwiches
         }
     };
 }]);
-

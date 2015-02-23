@@ -10,12 +10,15 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
     <link rel ="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel ="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel ="stylesheet" href="bower_components/semantic-ui/dist/semantic.min.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css">
   <!--<link rel="stylesheet" href="app.css">-->
     <!--<link rel="stylesheet" href="style.css">-->
 
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet">
+    <link href="css/animations.css" rel="stylesheet">
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
 
 
@@ -33,7 +36,7 @@
             <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
         </div>
         <!--logo start-->
-        <a href="index.html" class="logo"><b>DASH<span>IO</span></b></a>
+        <a href="#/home" class="logo"><b>SANDWICHES<span>APP</span></b></a>
         <!--logo end-->
         <div class="nav notify-row" id="top_menu">
             <!--  notification start -->
@@ -62,6 +65,8 @@
             <ul class="sidebar-menu" id="nav-accordion">
 
                 <p class="centered"><a href="profile.html"><img src="" class="img-circle" width="80"></a></p>
+                <a href="#/home" title="Grid View"><button><i class = "grid layout icon"></i></button></a>
+                <a href="#/list" title="List View"><button><i class="list layout icon"></i></button></a>
                 <h5 class="centered">What Do You Want To Eat?</h5>
 
                 <li><input class="form-control" ng-model="myFilter.name" placeholder="Search by name..."></li>
@@ -120,38 +125,26 @@
                 RIGHT SIDEBAR CONTENT
                 *********************************************************************************************************************************************************** -->
 
-                <div class="col-lg-3 ds">
+                <div class="col-lg-3 ds" ng-controller="RightSidebarController">
 
-                    <!-- RECENT ACTIVITIES SECTION -->
-                    <h4 class="centered mt">RECENT ACTIVITY</h4>
-                    <!-- First Activity -->
-                    <div class="desc">
+                    <!--ADDED FAVORITES SECTION-->
+                    <h4 class="centered mt">ADDED FAVORITES ({{filtered.length}})</h4>
+
+                    <!--<div class="desc"  ng-repeat="item in sandwichList | filter: {addFavorite: 1}">-->
+
+                    <!--Does ng-repeat, and also puts the items in a list called "filtered" so you can call the length of this list-->
+                    <div class="desc animated fadeIn sidebarLeave"  ng-repeat="item in filtered = (sandwichList | filter: {addFavorite: 1})">
                         <div class="thumb">
-                            <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
+                            <span class="badge; bg-theme"><img style="height: 75px; width: 75px" src="{{item.image}}"></span>
                         </div>
-                        <div class="details">
-                            <p><muted>Just Now</muted><br>
-                                <a href="#">Paul Rudd</a> purchased an item.<br>
+                        <div style="margin-left: 50px;" class="details">
+                            <p><muted>You've Added</muted><br>
+                                {{item.name}} to your favorites. <br>
                             </p>
                         </div>
+                        <br>
+                        &nbsp;&nbsp;&nbsp;<button><i ng-click="removeFavorite(item)" class="remove circle icon"></i></button>
                     </div>
-
-
-                    <!-- USERS ONLINE SECTION -->
-                    <h4 class="centered mt">TEAM MEMBERS ONLINE</h4>
-                    <!-- First Member -->
-                    <div class="desc">
-                        <div class="thumb">
-                            <img class="img-circle" src="" width="35px" height="35px" align="">
-                        </div>
-                        <div class="details">
-                            <p><a href="#">DIVYA MANIAN</a><br>
-                                <muted>Available</muted>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- CALENDAR-->
-                   <!--end calender-->
 
                 </div><!-- /col-lg-3 -->
             </div><!-- --/row ---->
@@ -191,13 +184,17 @@
   <!--AngularJS-->
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 
   <!--FirebaseJS-->
   <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+
+    <!--Angular Fire JS-->
   <script src="https://cdn.firebase.com/libs/angularfire/0.9.2/angularfire.min.js"></script>
   <!--<script src="bower_components/jquery/dist/jquery.min.js"></script>-->
 
-
+    <!--Semantic-UI JS-->
+    <script type="text/javascript" src="bower_components/semantic-ui/dist/semantic.min.js"></script>
 
   <script src="js/jquery.dcjqaccordion.2.7.js"></script>
   <script src="js/jquery.scrollTo.min.js"></script>
