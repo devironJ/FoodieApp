@@ -64,14 +64,15 @@
             <!-- sidebar menu start-->
             <ul class="sidebar-menu" id="nav-accordion">
 
-                <p class="centered"><a href="profile.html"><img src="" class="img-circle" width="80"></a></p>
+                <p class="centered">
                 <a href="#/home" title="Grid View"><button><i class = "grid layout icon"></i></button></a>
                 <a href="#/list" title="List View"><button><i class="list layout icon"></i></button></a>
+                </p>
                 <h5 class="centered">What Do You Want To Eat?</h5>
 
                 <li><input class="form-control" ng-model="myFilter.name" placeholder="Search by name..."></li>
                 <li>
-                    <a data-ng-click="myFilter={ sandwiches: ''}">All</a>
+                    <a class = "active" data-ng-click="myFilter={ sandwiches: ''}">All</a>
 
                 </li>
                 <li>
@@ -80,26 +81,6 @@
                 </li>
                 <li>
                     <a data-ng-click="myFilter={ sandwiches: 'Turkey'}">Turkey</a>
-                </li>
-
-                <li class="mt">
-                    <a class="active" href="index.html">
-                        <i class="fa fa-dashboard"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-
-                <li class="sub-menu dcjq-parent-li">
-                    <a href="javascript:;" class="dcjq-parent">
-                        <i class="fa fa-desktop"></i>
-                        <span>UI Elements</span>
-                        <span class="dcjq-icon"></span></a>
-                    <ul class="sub" style="display: none;">
-                        <li><a href="general.html">General</a></li>
-                        <li><a href="buttons.html">Buttons</a></li>
-                        <li><a href="panels.html">Panels</a></li>
-                        <li><a href="font_awesome.html">Font Awesome</a></li>
-                    </ul>
                 </li>
 
             </ul>
@@ -125,7 +106,7 @@
                 RIGHT SIDEBAR CONTENT
                 *********************************************************************************************************************************************************** -->
 
-                <div class="col-lg-3 ds" ng-controller="RightSidebarController">
+                <div class="col-lg-3 ds " id="sidebarRight" ng-controller="RightSidebarController">
 
                     <!--ADDED FAVORITES SECTION-->
                     <h4 class="centered mt">ADDED FAVORITES ({{filtered.length}})</h4>
@@ -135,9 +116,9 @@
                     <!--Does ng-repeat, and also puts the items in a list called "filtered" so you can call the length of this list-->
                     <div class="desc animated fadeIn sidebarLeave"  ng-repeat="item in filtered = (sandwichList | filter: {addFavorite: 1})">
                         <div class="thumb">
-                            <span class="badge; bg-theme"><img style="height: 75px; width: 75px" src="{{item.image}}"></span>
+                            <span class="badge bg-theme"><img style="height: 75px; width: 75px" src="{{item.image}}"></span>
                         </div>
-                        <div style="margin-left: 50px;" class="details">
+                        <div style="margin-left: 65px;" class="details">
                             <p><muted>You've Added</muted><br>
                                 {{item.name}} to your favorites. <br>
                             </p>

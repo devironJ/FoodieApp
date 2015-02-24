@@ -9,6 +9,13 @@ foodieAppControllers.controller("HomeController", ["$scope", "$firebase", "Fireb
     //uses a service to get non-favorite data from Firebase
     $scope.sandwichList = FirebaseGet.pullNonFavorites();
 
+    $scope.everyoneLikeOrdering = function(item){
+        return -item.everyoneLikes;
+    };
+    $scope.friendsLikeOrdering=function(item){
+        return -item.friendsLike;
+    };
+
     $scope.addFavorite = function(item){
         var ref = new Firebase("https://sandwiches-data.firebaseio.com/" + item.$id);
         var sync = $firebase(ref);

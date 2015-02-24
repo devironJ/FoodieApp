@@ -1,4 +1,4 @@
-<div class="row, fade-animation"  ng-init="isHidden=false; orderProp = 'everyoneLikes'" ng-hide="isHidden"  ng-repeat="item in sandwichList | filter:myFilter:name | orderBy: orderProp">
+<div class="row fade-animation"  ng-init="isHidden=false" ng-hide="isHidden"  ng-repeat="item in sandwichList | filter:myFilter:name | orderBy: everyoneLikeOrdering">
     <div class="col-lg-12">
         <div class="wellList">
             <div class="list-group">

@@ -3,16 +3,17 @@
     <div class="col-lg-12">
         <div class="row">
             <!-- TWITTER PANEL -->
-            <div class="col-md-4 mb"
-            ng-repeat="item in sandwichList | filter:myFilter:name | orderBy:random">
+            <div class="col-md-4 mb fade-animation"
+            ng-init = "isHidden=false" ng-repeat="item in sandwichList | filter:myFilter:name | orderBy:everyoneLikeOrdering">
                 <div class="instagram-panel pn animated">
                     <div class="background-hover-cards" style="background: url({{item.image}}) no-repeat center top;">
                       <div class="hover-item animated">
                         <!-- <i class="fa fa-instagram fa-4x"></i> -->
                         <i class="fa fa-info-circle"></i>
                         <p class="item-name">{{item.name}}</p>
-                        <p class="social-stats">Everyone: <i class="fa fa-heart"></i> 49</p>
-                        <p class="social-stats">Friends: <i class="fa fa-heart"></i> 68</p>
+                        <p class="social-stats"><small><i class="users icon"></i>:</small>&nbsp; {{item.everyoneLikes}} <i class="fa fa-heart"></i></p>
+                        <p class="social-stats"><small><i class="child icon"></i>:</small>&nbsp; {{item.friendsLike}} <i class="fa fa-heart"></i></p>
+                          <button class="btn btn-default" ng-click="addFavorite(item); isHidden=true" title="Add to Favorites"><i class="plus icon"></i>Add</button>
                       </div>
                   </div>
                 </div>

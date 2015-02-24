@@ -5,6 +5,14 @@ Author: Carlos Alvarez
 Website: http://Alvarez.is/
 */
 
+#sidebarRight {
+    width: 428px;
+    height: 100%;
+    position: fixed;
+    background: #2f323a;
+    right: 0;
+}
+
 .wellList {
     height: 200px;
     /*padding: 4px 4px 2px 8px;*/
