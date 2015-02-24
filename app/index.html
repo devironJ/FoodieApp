@@ -122,6 +122,8 @@
                             <p><muted>You've Added</muted><br>
                                 {{item.name}} to your favorites. <br>
                             </p>
+                            <p><small><i class="users icon"></i>:</small>&nbsp; <b>{{item.everyoneLikes}}</b> <i class="heart icon"></i>&nbsp;&nbsp;
+                                <small><i class="child icon"></i>:</small>&nbsp; <b>{{item.friendsLike}}</b><i class="heart icon"></i></p>
                         </div>
                         <br>
                         &nbsp;&nbsp;&nbsp;<button><i ng-click="removeFavorite(item)" class="remove circle icon"></i></button>

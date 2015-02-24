@@ -1,11 +1,20 @@
 /*fade in and out animations for adding to favorites and being placed back into list*/
 
-.fade-animation.ng-enter {
+.fade-animation.ng-enter,
+.fade-animation.ng-leave{
     -webkit-transition: 0.5s linear all;
     transition: 0.5s linear all;
 }
 
 .fade-animation.ng-enter{
+    opacity:0;
+}
+
+.fade-animation.ng-leave{
+    opacity:1;
+}
+
+.fade-animation.ng-leave.ng-leave-active{
     opacity:0;
 }
 

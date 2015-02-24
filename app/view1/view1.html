@@ -11,8 +11,9 @@
                         <!-- <i class="fa fa-instagram fa-4x"></i> -->
                         <i class="fa fa-info-circle"></i>
                         <p class="item-name">{{item.name}}</p>
-                        <p class="social-stats"><small><i class="users icon"></i>:</small>&nbsp; {{item.everyoneLikes}} <i class="fa fa-heart"></i></p>
-                        <p class="social-stats"><small><i class="child icon"></i>:</small>&nbsp; {{item.friendsLike}} <i class="fa fa-heart"></i></p>
+                          <p>{{item.place}} - {{item.city}}</p>
+                        <p class="social-stats"><small><i class="users icon"></i>:</small>&nbsp; {{item.everyoneLikes}} <i class="fa fa-heart"></i>&nbsp;
+                        <small><i class="child icon"></i>:</small>&nbsp; {{item.friendsLike}} <i class="fa fa-heart"></i></p>
                           <button class="btn btn-default" ng-click="addFavorite(item); isHidden=true" title="Add to Favorites"><i class="plus icon"></i>Add</button>
                       </div>
                   </div>
