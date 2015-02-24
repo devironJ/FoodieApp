@@ -39,11 +39,7 @@
         <a href="#/home" class="logo"><b>SANDWICHES<span>APP</span></b></a>
         <!--logo end-->
         <div class="nav notify-row" id="top_menu">
-            <!--  notification start -->
-            <ul class="nav top-menu">
 
-            </ul>
-            <!--  notification end -->
         </div>
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
@@ -68,20 +64,65 @@
                 <a href="#/home" title="Grid View"><button><i class = "grid layout icon"></i></button></a>
                 <a href="#/list" title="List View"><button><i class="list layout icon"></i></button></a>
                 </p>
-                <h5 class="centered">What Do You Want To Eat?</h5>
+                <h4 class="centered" style="color: white;">What Do You Want To Eat?</h4>
 
+
+
+                <!--<li>-->
+                <!--<div class="ui floating dropdown labeled search icon button" style="background-color: white;">-->
+                    <!--<i class="world icon"></i>-->
+                    <!--<span class="text">Select Location</span>-->
+                    <!--<div class="menu">-->
+                        <!--<div data-ng-click = "myFilter={city: ''}" class="item">All</div>-->
+                        <!--<div data-ng-click = "myFilter={city: 'Costa Mesa'}" class="item">Costa Mesa</div>-->
+                        <!--<div data-ng-click = "myFilter={city: 'Newport Beach'}" class="item">Newport Beach</div>-->
+                        <!--<div data-ng-click = "myFilter={city: 'Irvine'}" class="item">Irvine</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--</li>-->
+
+
+                <!--Original format of click-->
+                <!--<li>-->
+                    <!--<a class = "active" data-ng-click="myFilter.sandwiches= ''">All</a>-->
+
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a data-ng-click="myFilter.sandwiches= 'Burger'">Burgers</a>-->
+
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a data-ng-click="myFilter.sandwiches= 'Turkey'">Turkey</a>-->
+                <!--</li>-->
+
+                <li>
+                    <div class="ui floating dropdown labeled search icon button" style="background-color: white; height: 40px; width: 190px;">
+                        <i class="food icon"></i>
+                        <span class="text">Select Sandwich</span>
+                        <div class="menu">
+                            <div data-ng-click = "myFilter.sandwiches= ''" class="item">All Sandwiches</div>
+                            <div data-ng-click = "myFilter.sandwiches= 'Burgers'" class="item">Burgers</div>
+                            <div data-ng-click = "myFilter.sandwiches= 'Turkey'" class="item">Turkey Sandwiches</div>
+                        </div>
+                    </div>
+                </li><br>
+
+                <h4 class="centered" style="color: white;">Where?</h4>
+                <li>
+                    <div class="ui floating dropdown labeled search icon button" style="background-color: white;height: 40px; width: 190px;">
+                        <i class="world icon"></i>
+                        <span class="text">Select Location</span>
+                        <div class="menu">
+                            <div data-ng-click = "myFilter.city = ''" class="item">Orange County</div>
+                            <div data-ng-click = "myFilter.city ='Costa Mesa'" class="item">Costa Mesa</div>
+                            <div data-ng-click = "myFilter.city ='Newport Beach'" class="item">Newport Beach</div>
+                            <div data-ng-click = "myFilter.city ='Irvine'" class="item">Irvine</div>
+                        </div>
+                    </div>
+                </li><br>
+                <h4 class="centered" style="color: white;">Or</h4>
+                <!--Search bar by name-->
                 <li><input class="form-control" ng-model="myFilter.name" placeholder="Search by name..."></li>
-                <li>
-                    <a class = "active" data-ng-click="myFilter={ sandwiches: ''}">All</a>
-
-                </li>
-                <li>
-                    <a data-ng-click="myFilter={ sandwiches: 'Burger'}">Burgers</a>
-
-                </li>
-                <li>
-                    <a data-ng-click="myFilter={ sandwiches: 'Turkey'}">Turkey</a>
-                </li>
 
             </ul>
             <!-- sidebar menu end-->
@@ -178,6 +219,7 @@
 
     <!--Semantic-UI JS-->
     <script type="text/javascript" src="bower_components/semantic-ui/dist/semantic.min.js"></script>
+
 
   <script src="js/jquery.dcjqaccordion.2.7.js"></script>
   <script src="js/jquery.scrollTo.min.js"></script>

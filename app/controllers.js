@@ -3,11 +3,13 @@
  */
 var foodieAppControllers = angular.module("foodieAppControllers", ["ngRoute","firebase", "foodieAppServices","ngAnimate"]);
 
-foodieAppControllers.controller("HomeController", ["$scope", "$firebase", "FirebaseGet",
-    function($scope, $firebase, FirebaseGet){
+foodieAppControllers.controller("HomeController", ["$scope","$firebase", "FirebaseGet",
+    function($scope,$firebase, FirebaseGet){
 
     //uses a service to get non-favorite data from Firebase
     $scope.sandwichList = FirebaseGet.pullNonFavorites();
+
+
 
     $scope.everyoneLikeOrdering = function(item){
         return -item.everyoneLikes;
@@ -26,7 +28,7 @@ foodieAppControllers.controller("HomeController", ["$scope", "$firebase", "Fireb
             console.log("Error: "+ error);
         });
     };
-}]);
+        }]);
 
 foodieAppControllers.controller("RightSidebarController",["$scope", "$firebase", "FirebaseGet",
     function($scope, $firebase, FirebaseGet){
@@ -45,5 +47,5 @@ foodieAppControllers.controller("RightSidebarController",["$scope", "$firebase",
             console.log("Error: "+ error);
         });
     };
-}]);
 
+}]);

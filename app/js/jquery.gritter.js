@@ -10,7 +10,13 @@
  */
 
 (function($){
- 	
+    $('.ui.floating.dropdown').on("click", function(){
+        $(this).dropdown();
+    });
+
+    //$('.ui.floating.dropdown').on("", function(){
+    //    $(this).dropdown('hide');
+    //});
 	/**
 	* Set it up as an object under the jQuery namespace
 	*/
