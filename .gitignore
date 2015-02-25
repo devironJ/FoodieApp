@@ -6,3 +6,9 @@ tmp
 .DS_Store
 .idea
 .log
+bower.json
+package.json
+e2e-tests
+.bowerrc
+.travis.yml
+karma.conf.js
