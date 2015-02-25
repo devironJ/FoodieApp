@@ -60,4 +60,8 @@ foodieAppControllers.controller("FavoritesController",["$scope", "$firebase","Fi
             console.log("Error: "+ error);
         });
     };
+
+    $scope.everyoneLikeOrdering = function(item){
+        return -item.everyoneLikes;
+    };
 }]);
