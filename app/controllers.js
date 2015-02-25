@@ -9,8 +9,6 @@ foodieAppControllers.controller("HomeController", ["$scope","$firebase", "Fireba
     //uses a service to get non-favorite data from Firebase
     $scope.sandwichList = FirebaseGet.pullNonFavorites();
 
-
-
     $scope.everyoneLikeOrdering = function(item){
         return -item.everyoneLikes;
     };
@@ -28,7 +26,7 @@ foodieAppControllers.controller("HomeController", ["$scope","$firebase", "Fireba
             console.log("Error: "+ error);
         });
     };
-        }]);
+}]);
 
 foodieAppControllers.controller("RightSidebarController",["$scope", "$firebase", "FirebaseGet",
     function($scope, $firebase, FirebaseGet){
@@ -47,5 +45,19 @@ foodieAppControllers.controller("RightSidebarController",["$scope", "$firebase",
             console.log("Error: "+ error);
         });
     };
+}]);
 
+foodieAppControllers.controller("FavoritesController",["$scope", "$firebase","FirebaseGet", function($scope, $firebase, FirebaseGet){
+    $scope.sandwichList = FirebaseGet.pullFavorites();
+
+    $scope.removeFavorite = function(item){
+        var ref = new Firebase("https://sandwiches-data.firebaseio.com/" + item.$id);
+        var sync = $firebase(ref);
+
+        sync.$update({addFavorite: 0}).then(function(ref) {
+            console.log("SUCCESS: "+ ref.key());    // bar
+        }, function(error) {
+            console.log("Error: "+ error);
+        });
+    };
 }]);

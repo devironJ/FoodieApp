@@ -43,7 +43,7 @@
         </div>
         <div class="top-menu">
             <ul class="nav pull-right top-menu">
-                <li><a class="logout" href="login.html">Logout</a></li>
+                <li><button class="logout">Logout</button></li>
             </ul>
         </div>
     </header>
@@ -148,7 +148,10 @@
                 *********************************************************************************************************************************************************** -->
 
                 <div class="col-lg-3 ds " id="sidebarRight" ng-controller="RightSidebarController">
-
+                    <p class="centered">
+                        <a href="#/favorites-grid" title="Grid View Favorites"><button><i class = "grid layout icon"></i></button></a>
+                        <a href="#/favorites-list" title="List View Favorites"><button><i class="list layout icon"></i></button></a>
+                    </p>
                     <!--ADDED FAVORITES SECTION-->
                     <h4 class="centered mt">ADDED FAVORITES ({{filtered.length}})</h4>
 
@@ -177,9 +180,10 @@
 
     <!--main content end-->
     <!--footer start-->
+    <br>
+    <br>
     <footer class="site-footer">
-        <div class="text-center">
-            2014 - Alvarez.is
+        <div class="centered">
             <a href="index.html#" class="go-top">
                 <i class="fa fa-angle-up"></i>
             </a>

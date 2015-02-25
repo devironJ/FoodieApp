@@ -4,7 +4,7 @@
         <div class="row">
             <!-- TWITTER PANEL -->
             <div class="col-md-4 mb fade-animation"
-            ng-init = "isHidden=false" ng-repeat="item in sandwichList | filter:myFilter:name| filter: cityFilter | orderBy:everyoneLikeOrdering">
+            ng-init = "isHidden=false" ng-repeat="item in sandwichList | filter:myFilter| orderBy:everyoneLikeOrdering">
                 <div class="instagram-panel pn animated">
                     <div class="background-hover-cards" style="background: url({{item.image}}) no-repeat center top;">
                       <div class="hover-item animated">
